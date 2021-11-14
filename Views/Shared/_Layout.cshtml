@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content=" ">
+    <meta name="author" content=" ">
+    <title>TPDDL Play Store</title>
+    <!-- Custom fonts for this template-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    @Styles.Render("~/Content/css/Dasboard.css")
+    @Styles.Render("~/Content/css/StyleSheet1.css")
+    @Styles.Render("~/Content/css/all.min.css")
+   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+   
+
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+                <div class="sidebar-brand-icon rotate-n-15">
+
+                </div>
+                <div class="sidebar-brand-text mx-3">TATA POWER-DDL</div>
+            </a>
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+            <!-- Nav Item - Dashboard -->
+            <div class="nav-item active">
+                <a class="nav-link" href="~/App/AddCards">
+                    <i class="bi bi-speedometer"></i>
+                    <span>App Store</span>
+                </a>
+            </div>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <div class="nav-item">
+                <a class="nav-link" href="~/App/AppTable">
+                    <i class="bi bi-plus-circle-fill"></i>
+                    <span>Add App</span>
+                </a>
+
+            </div>
+
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+
+            </div>
+
+
+
+           
+
+            <!-- Nav Item - Tables -->
+            <div class="nav-item">
+                <a class="nav-link" href="~/App/AddVersionApp">
+                    <i class="bi bi-table"></i>
+                    <span>Add App Versions</span>
+                </a>
+            </div>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </div>
+        <!-- End of Sidebar -->
+      
+     
+
+       
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+ <header>
+     <nav class="navbar navbar-expand navbar topbar mb-4 static-top shadow">
+
+         <!-- Sidebar Toggle (Topbar) -->
+         <a>
+             <i class="bi bi-arrow-left"></i>
+         </a>
+
+         <!-- Topbar Search -->
+         <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+             <div class="input-group">
+                 <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                        aria-label="Search" aria-describedby="basic-addon2">
+                 <div class="input-group-append">
+                     <button class="btn btn-success" type="button">
+                         <i class="bi bi-search"></i>
+                     </button>
+                 </div>
+             </div>
+         </form>
+
+         <!-- Topbar Navbar -->
+         <ul class="navbar-nav ml-auto">
+
+             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+             <li class="nav-item dropdown no-arrow d-sm-none">
+                 <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <i class="fas fa-search fa-fw"></i>
+                 </a>
+                 <!-- Dropdown - Messages -->
+                 <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                      aria-labelledby="searchDropdown">
+                     <form class="form-inline mr-auto w-100 navbar-search">
+                         <div class="input-group">
+                             <input type="text" class="form-control bg-light border-0 small"
+                                    placeholder="Search for..." aria-label="Search"
+                                    aria-describedby="basic-addon2">
+                             <div class="input-group-append">
+                                 <button class="btn btn-primary" type="button">
+                                     <i class="fas fa-search fa-sm"></i>
+                                 </button>
+                             </div>
+                         </div>
+                     </form>
+                 </div>
+             </li>
+
+             <!-- Nav Item - User Information -->
+             <li class="nav-item dropdown no-arrow">
+                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <span class="mr-2 d-none d-lg-inline text-gray-600 small">USER</span>
+
+                     <asp:Image runat=”server” ImageURL=”~/Images/undraw_profile.svg”></asp:Image>
+                 </a>
+                 <!-- Dropdown - User Information -->
+                 <ul class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                     aria-labelledby="userDropdown">
+                     <li class="dropdown-item">@Html.ActionLink("Logout", "Account")</li>
+                 </ul>
+             </li>
+
+         </ul>
+
+     </nav>
+    </header>
+
+            <!-- Main Content -->
+            <div id="content">
+                @RenderBody()
+            </div>
+
+        </div>
+    </div>
+
+
+    @Scripts.Render("~/Content/js/sb-admin-.min.js")
+    @Scripts.Render("~/Content/js/jquery.min.js")
+    @Scripts.Render("~/Content/js/jquery.easing.min.js")
+    @Scripts.Render("~/Content/js/bootstrap.bundle.min.js")
+    @Scripts.Render("~/Content/js/chart-area-demo.js")
+    @Scripts.Render("~/Content/js/chart-bar-demo.js")
+    @Scripts.Render("~/Content/js/chart-pie-demo.js")
+    @Scripts.Render("~/Content/js/Chart.min.js")
+    @Scripts.Render("~/Content/js/Chart.bundle.min.js")
+    @Scripts.Render("~/Content/js/dataTables.bootstrap4.min.js")
+    @Scripts.Render("~/Content/js/jquery.dataTables.min.js")
+    @Scripts.Render("~/Content/js/jquery-3.5.1.js")
+
+    @Scripts.Render("~/Content/js/datatables-demo.js")
+    @Scripts.Render("~/Content/js/bootstrap.min.js")
+
+</body>
+</html>
+

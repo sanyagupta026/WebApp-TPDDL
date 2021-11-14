@@ -1,0 +1,27 @@
+﻿@model WebApp.Models.AddApp
+
+@{
+    ViewBag.Title = "DeleteApp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+ <div class="alert alert-danger" role="alert">
+ <dl class="dl-horizontal">
+      <dd class="text-dark">
+             Are you sure you want to delete @Html.DisplayFor(model => model.AppName) ?
+         </dd>
+
+     </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+ <div class="form-actions no-color">
+     <input type="submit" value="Delete" class="btn btn-danger" />
+     <input type="reset" value="Cancel" href="AppTable" class="btn btn-light" />
+
+ </div>
+    }
+</div>

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<WebApp.Models.AddApp>
+
+    @{
+    ViewBag.Title = "AddCards";
+    }
+
+
+
+    @Styles.Render("~/Content/css/style.css")
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+
+
+    <div class="container-fluid">
+        <div class="row">
+
+
+            @foreach (var item in Model)
+        {
+
+            <div class="col-lg-6 mb-4">
+                <div class="card shadow mb-4">
+
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">
+                            @item.AppName
+
+
+
+                        </h6>
+                        <div class="dropdown no-arrow">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bi bi-three-dots-vertical "></i>
+                               
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                 aria-labelledby="dropdownMenuLink">
+                                <div class="dropdown-header"></div>
+
+                                <a class="dropdown-item" href="@item.AppLink" download>Download</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">@item.AppName</div>
+                        <div class="text-xs font-weight-bold">@item.InsertedOn</div>
+
+                        <div class="text-xs font-weight-bold">@item.AppDescription</div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        }
+        </div>
+    </div>

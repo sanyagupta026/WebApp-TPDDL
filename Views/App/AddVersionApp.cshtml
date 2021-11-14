@@ -1,0 +1,58 @@
+﻿@model WebApp.Models.AppVersion
+
+@{
+    ViewBag.Title = "AddVersionApp"; https://www.msn.com/en-in/feed
+}
+
+
+@Styles.Render("~/Content/css/addversion.css")
+
+
+@using (Html.BeginForm())
+{
+   <div class="container">
+        <div class="title">Add Version</div>
+        <div class="content">
+            <form action="#">
+                <div class="user-details">
+                    <hr />
+
+                    <div class="input-box">
+                        <span class="details">App Id</span>
+                        @Html.EditorFor(model => model.AppId, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.AppId, "", new { @class = "text-danger" })
+                    </div>
+
+
+                    <div class="input-box">
+                        <span class="details">App Version</span>
+                        @Html.EditorFor(model => model.AppVersion1, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.AppVersion1, "", new { @class = "text-danger" })
+                    </div>
+
+                </div>
+
+
+                <div class="button">
+                    <input type="submit" value="Add Version">
+                </div>
+
+
+            </form>
+            
+        </div>
+    </div>
+
+
+
+
+    
+}
+
+
+
+
+
+
+
+

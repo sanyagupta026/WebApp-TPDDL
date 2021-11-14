@@ -1,0 +1,87 @@
+﻿@model IPagedList<WebApp.Models.AddApp>
+
+@{
+    ViewBag.Title = "AppTable";
+}
+
+@using PagedList.Mvc;
+@using PagedList;
+
+<div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title-bg-light">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2>Manage <b>Apps</b></h2>
+                    </div>
+                    <div class="col-sm-push-8">
+                        <a href="/App/AddApp" class="btn btn-dark ml-xl-n1">Add New App</a>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <table class="table table-striped table-hover">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.First().AppId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.First().AppName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.First().InsertedBy)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.First().InsertedOn)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.First().AppLink)
+                    </th>
+
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AppId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AppName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InsertedBy)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InsertedOn)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AppLink)
+                        </td>
+
+
+                        <td>
+                            @Html.ActionLink("Edit", "EditApp", new { id = item.AppId }, new { htmlAttributes = new { @class = "text" } })
+
+
+                            @Html.ActionLink("Delete", "DeleteApp", new { id = item.AppId }, new { htmlAttributes = new { @class = "text" } })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+
+        </div>
+    </div>
+    @Html.PagedListPager(Model, i => Url.Action("AppTable", "App", new { i, search = Request.QueryString["search"] }))
+   
+
+
+</div>
+
